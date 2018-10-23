@@ -1,0 +1,28 @@
+user_user:
+    resource: "@UserBundle/Resources/config/routes/user.yml"
+    prefix:   /user
+
+image_image:
+    resource: "@UserBundle/Resources/config/routes/image.yml"
+    prefix:   /image
+
+# Autentication
+
+user_homepage:
+    path:     /
+    defaults: { _controller: UserBundle:User:home }
+
+user_home:
+    path:     /home
+    defaults: { _controller: UserBundle:User:home }
+
+user_login:
+    path:     /login
+    defaults: { _controller: UserBundle:Security:login }
+
+user_login_check:
+    path:     /login_check
+    defaults: { _controller: UserBundle:Security:loginCheck }
+
+user_logout:
+    path:     /logout

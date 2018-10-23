@@ -1,0 +1,21 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+	{{ parent() }}
+	<div class="container">
+        <h1 class="text-center"> GALERÍA CHIDORIS</h1>
+        <div class="row" style="margin-top:30px">
+            {% for img in images %}
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" src="{{asset('imagesGallery/'~img.image)}}">
+                    <div class="card-body">
+                      <span style="font-size: 16px"><strong>{{img.title}}</strong></span>
+                      <p class="card-text" style="font-size: 12px">{{img.description}}</p>
+                    </div>
+                  </div>
+                </div>
+            {% endfor %}        
+        </div>
+	</div>
+{% endblock %}

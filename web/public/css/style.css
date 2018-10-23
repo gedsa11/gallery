@@ -1,0 +1,14 @@
+h2{
+	color: #6c757d;
+}
+.btn-file{
+	display: block;
+}
+
+.link-menu{
+	color: white;
+}
+.link-menu:hover{
+	color: white;
+	font-weight: 600;
+}
